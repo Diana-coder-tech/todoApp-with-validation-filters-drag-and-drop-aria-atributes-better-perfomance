@@ -1,4 +1,4 @@
-## [ToDo приложение](https://diana-coder-tech.github.io/todoAppExtended/)
+## [ToDo приложение](https://diana-coder-tech.github.io/todoApp-with-validation-filters-drag-and-drop-aria-atributes-better-perfomance/)
 ### Базовая функциональность:
 + Добавление задач с полями: название, описание, теги (минимум 1)
 + Срок выполнения
