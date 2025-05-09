@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>ToDo приложение</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="display-4 mb-2">ToDo приложение</h2>
+        <h4 class="mb-4">Список задач на сегодня</h4>
+
+        <!-- Фильтр -->
+        <div class="form-group">
+            <input type="text" id="searchInput" class="form-control mb-2" placeholder="Поиск по названию или описанию">
+            <select id="priorityFilter" class="form-control mb-2">
+                <option value="all">Все приоритеты</option>
+                <option value="low">Низкий</option>
+                <option value="medium">Средний</option>
+                <option value="high">Высокий</option>
+            </select>
+            <select id="tagFilter" class="form-control mb-2">
+                <option value="all">Все теги</option>
+            </select>
+            <select id="dueDateFilter" class="form-control mb-2">
+                <option value="all">Все сроки</option>
+                <option value="overdue">Просроченные</option>
+                <option value="today">Сегодня</option>
+                <option value="future">Будущие</option>
+            </select>
+        </div>
+
+        <!-- Список задач -->
+        <div class="card mb-4">
+            <ul id="tasksList" class="list-group list-group-flush"></ul>
+        </div>
+
+        <!-- Форма добавления задачи -->
+        <div class="card bg-light">
+            <div class="card-header">Добавить новую задачу</div>
+            <div class="card-body">
+                <form id="form">
+                    <div class="form-group">
+                        <input type="text" id="taskInput" class="form-control" placeholder="Название задачи" required>
+                        <textarea id="descriptionInput" class="form-control mt-2" placeholder="Описание задачи"></textarea>
+                        <input type="text" id="tagsInput" class="form-control mt-2" placeholder="Теги (через запятую)" required>
+                        <input type="date" id="dueDateInput" class="form-control mt-2" required>
+                        <select id="priorityInput" class="form-control mt-2">
+                            <option value="low">Низкий</option>
+                            <option value="medium">Средний</option>
+                            <option value="high">Высокий</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Добавить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
